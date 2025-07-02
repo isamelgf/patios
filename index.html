@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nave 6</title>
+  <style>
+    .icono {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 19cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .icono2 {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 19.8cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .icono3 {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 20.6cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .icono4 {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 21.4cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .icono5 {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 22.2cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .icono6 {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 23cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .icono7 {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 23.8cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .icono8 {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 24.6cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .icono9 {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 25.4cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .icono10 {
+      font-size: 40px;
+      margin: 10px;
+      position: absolute;
+      top: 12cm;
+      left: 26.2cm;
+      display: none;
+      /* Ocultos por defecto */
+    }
+
+    .visible {
+      display: inline-block;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+
+  <h1>Nave 6</h1>
+
+ <!-- <button onclick="valores()">prueba</button>
+  <input id="bahia" type="text" placeholder="icono">
+  <input id="visible" type="text" placeholder="visible">
+  <input id="folio" type="text" placeholder="folio">-->
+
+  <div id="iconos">
+    <img src="patio6.jpg">
+
+    <img src="truck.ico" class="icono" id="icono1" width="20" height="60">
+    <img src="truck.ico" class="icono2" id="icono2" width="20" height="60">
+    <img src="truck.ico" class="icono3" id="icono3" width="20" height="60">
+    <img src="truck.ico" class="icono4" id="icono4" width="20" height="60">
+    <img src="truck.ico" class="icono4" id="icono5" width="20" height="60">
+    <img src="truck.ico" class="icono5" id="icono6" width="20" height="60">
+    <img src="truck.ico" class="icono6" id="icono7" width="20" height="60">
+    <img src="truck.ico" class="icono7" id="icono8" width="20" height="60">
+    <img src="truck.ico" class="icono8" id="icono9" width="20" height="60">
+    <img src="truck.ico" class="icono9" id="icono10" width="20" height="60">
+
+  </div>
+
+
+
+  <script>
+   
+
+    const params = new URLSearchParams(window.location.search);
+    const bahia = params.get("bahia");
+    const visible = params.get("visible");
+    const folio = params.get("folio");
+    
+
+    visibilidad(bahia, visible, folio);
+
+    function visibilidad(bahia, visible, folio) {
+      const ikono = document.getElementById(bahia);;
+      if (visible == "true") {
+
+        ikono.classList.add("visible");
+        ikono.title = "folio " + folio;
+      }
+      else {
+        ikono.classList.remove("visible");
+        ikono.title = "";
+      }
+    }
+  </script>
+</body>
+
+</html>
